@@ -1,0 +1,63 @@
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Scanner;
+
+public class CalendarioTeste {
+	//atributos:
+    
+	int dia;
+	int mes;
+	int ano;
+	int diamais;
+	int mesmais;
+	int anomais;
+	int novoDia;
+	int novoMes;
+	int novoAno;
+	
+	Scanner sc = new Scanner(System.in);
+
+		void opcao(int op){
+		if (op == 1){
+		System.out.println("Quer adicionar quantos dias?");
+        diamais = sc.nextInt();
+     
+        
+		} else if (op == 2){
+		System.out.println("Quer adicionar quantos meses?");
+		mesmais = sc.nextInt();
+		
+		} else if (op == 3){
+			System.out.println("Quer adicionar quantos anos?");
+			anomais = sc.nextInt();
+		}
+	}
+	    
+	int somarDias(){
+	        novoDia 	= 		(dia 	+	 diamais);	
+	       
+	    return novoDia;
+	} 
+
+	int somarMesesr() {
+		novoMes 	= 		(mes 	+	 mesmais);		
+	    return novoMes;
+	} 
+	    
+	int somarAnos  (){
+		novoAno 	= 		(ano	+	  anomais );		
+	    return novoAno;   
+	} 
+	    
+
+	void imprimirAtributos( ) {
+
+	System.out.println("Data Atual: " + dia+ "/" +mes+ "/" +ano ); 
+	System.out.println("Nova Data: " + this.somarDias()+	"/"	+this.somarMesesr()+	"/"	+this.somarAnos() ); 
+		
+		
+	    
+
+	}
+	    
+	} 
