@@ -6,27 +6,28 @@ import java.util.Scanner;
 public class Funcionamento {
 
 	public static void main(String[] args) {
-int op=1;
+	int op=1;
 
 		 Scanner sc = new Scanner(System.in);
-		CalendarioTeste c1 = new CalendarioTeste();
+		 CalendarioTeste c1 = new CalendarioTeste();
 		
 		c1.iniciar();
 
-		  while (op != 0){ 
-			 System.out.println(
-	                   "\n1- Adicionar dias\n"
+		while (op != 0){ 
+			System.out.println(
+	                "\n1- Adicionar dias\n"
 	                + "2- Adicionar meses\n"
 	                + "3- Adicionar anos\n"
 	                + "0 - Fechar o programa\n"
 	                + "Escolha a opção:	");
 		 	op = sc.nextInt();	
-		 	c1.opcao(op);     // chamando o método void opcao  
-		 	c1.imprimirAtributos();
+		 	
+			c1.opcao(op);     // chamando o método void opcao  
+		 	
+			c1.imprimirAtributos();
 		 	
 		  } 	
 	}
-
 }
 
 _______________________________________________________________________________________
@@ -58,14 +59,14 @@ public class CalendarioTeste {
 	
 	void opcao(int op){
 		if (op == 1){
-		System.out.println("Quer adicionar quantos dias?");
-        diamais = sc.nextInt();
-        c.add(Calendar.DAY_OF_YEAR,diamais );
+			System.out.println("Quer adicionar quantos dias?");
+        		diamais = sc.nextInt();
+       			c.add(Calendar.DAY_OF_YEAR,diamais );
         
 		} else if (op == 2){
-		System.out.println("Quer adicionar quantos meses?");
-		mesmais = sc.nextInt();
-		  c.add(Calendar.MONTH,mesmais );     
+			System.out.println("Quer adicionar quantos meses?");
+			mesmais = sc.nextInt();
+			c.add(Calendar.MONTH,mesmais );     
 		  
 		} else if (op == 3){
 			System.out.println("Quer adicionar quantos anos?");
